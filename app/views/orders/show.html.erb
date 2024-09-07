@@ -5,9 +5,23 @@
   </header>
 
   <div class="order-summary jumbotron">
-    <h4>Thank you for your order!</h4>
+    <h4>Thank you for your order, placed with <%= @order.email %>!</h4>
   </div>
 
+  <div class="line-items">
+    <h3>Items in your order:</h3>
+    <div class="list-group">
+      <!-- Iterate over each line item in the order -->
+      <%= render @order.line_items %>
+    </div>
+  </div>
+
+  <!-- Order total -->
+  <div class="order-total">
+  <h4>Total: <%= @order.total.format %></h4>
+  </div>
+
+  <!-- Continue shopping button -->
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 
 </section>
