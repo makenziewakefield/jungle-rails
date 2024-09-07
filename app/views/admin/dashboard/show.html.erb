@@ -1,9 +1,31 @@
+<!-- app/views/admin/dashboard/show.html.erb -->
 <h1>Admin Dashboard</h1>
+<p>Welcome to the admin dashboard! Here is an overview of your store:</p>
 
-<div class="dashboard-summary">
-  <p>Click here to manage products.</p>
+<div class="container mt-4">
+  <div class="row">
+    <!-- Products Count -->
+    <div class="col-md-6 mb-3">
+      <div class="card text-white bg-primary">
+        <div class="card-body">
+          <h5 class="card-title">Products Count:</h5>
+          <p class="card-text">
+            <%= @product_count %> 
+          </p>
+        </div>
+      </div>
+    </div>
 
-  <div class="dashboard-links">
-    <%= link_to 'Manage Products', admin_products_path, class: 'btn btn-primary' %>
+    <!-- Categories Count -->
+    <div class="col-md-6 mb-3">
+      <div class="card text-white bg-primary">
+        <div class="card-body">
+          <h5 class="card-title">Categories Count:</h5>
+          <p class="card-text">
+            <%= @category_count %> 
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
