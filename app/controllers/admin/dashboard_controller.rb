@@ -4,7 +4,7 @@ class Admin::DashboardController < ApplicationController
   def show
     @total_products = Product.count
     @total_orders = Order.count
-    @total_revenue = Order.sum(:total_cents) / 100.0 # assuming total_cents is in cents
+    @total_revenue = Order.sum(:total_cents) / 100.0
   end
 
   private
