@@ -1,2 +1,9 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<h1>Admin Dashboard</h1>
+
+<div class="dashboard-summary">
+  <p>Click here to manage products.</p>
+
+  <div class="dashboard-links">
+    <%= link_to 'Manage Products', admin_products_path, class: 'btn btn-primary' %>
+  </div>
+</div>
